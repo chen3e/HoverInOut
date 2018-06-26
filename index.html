@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Flipping Cats</title>
+        <meta charset="UTF-8">
+        <!--<link rel="stylesheet" type="text/css" href="index.css">-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <style type="text/css">
+        img{
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+        }
+        </style>
+    </head>
+    <body>
+        <img id="img1" src="images/img1.jpg" alt="There should be a kitty here :(">
+        <img id="img2" src="images/img2.jpg" alt="There should be a kitty here :(">
+        <img id="img3" src="images/img3.jpg" alt="There should be a kitty here :(">
+        <img id="img4" src="images/img4.jpg" alt="There should be a kitty here :(">
+
+        <script>
+        $('img').hover(function(){
+                $(this).attr('src', 'images/alt'+$(this).attr('src')[10]+'.jpg');
+            },
+            function(){
+                $(this).attr('src', 'images/img'+$(this).attr('src')[10]+'.jpg')
+            }
+        )
+        </script> 
+    </body>
+</html>
